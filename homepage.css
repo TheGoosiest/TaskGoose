@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 16px 'Montserrat', sans-serif;
+}
+
+.container{
+    background-color: #cdcdcd;
+    height: 100vh;
+    width: 100vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+label {
+    margin: 5px;
+}
+
+.userlogo{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+}
+
+.taskbar {
+    margin: auto;
+}
+
+.drpdwn{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+
+.taskbar a {
+    color: black;
+    border: none;
+    background-color: white;
+}
+
+.tasks {
+    padding: 15px 100px;
+}
+
+.taskbar a:hover {
+    background-color: #dbdbdb;
+}
+
+.username{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    justify-content: center;
+}
+
+.logoutlink:hover{
+    background-color: red;
+    color: white;
+}
+
+.leftsidebar{
+    position: fixed;
+    margin-top: 50px;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+}
+
+.logoutlink{
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    padding : 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid red;
+    transition: 200ms;
+    margin-top: auto;
+}
+
+#maincontent {
+    margin-left: 220px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    height: calc(100vh - 90px);
+}
+
+.profile {
+    color: black;
+    font-weight: 600;
+    background-color: #ffffff;
+    border: 2px solid rgb(111, 157, 122);;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    transition: 200ms;
+}
+
+.profile:hover {
+    background-color: rgb(111, 157, 122);
+}
+
+.stats {
+    color: black;
+    font-weight: 600;
+    background-color: #ffffff;
+    border: 2px solid rgb(111, 157, 122);;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    transition: 200ms;
+}
+
+.stats:hover {
+    background-color: rgb(111, 157, 122);
+}

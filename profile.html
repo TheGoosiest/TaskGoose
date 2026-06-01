@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='profile.css')}}">
+    </head>
+    <body>
+        <div class="profilediv">
+            <h1 class="header">Profile</h1>
+            <div class="profilio">
+                <img src="{{url_for( 'static', filename='Goosepfp.png')}}" alt="" class="userLogo">
+                <div class="infocontainer">
+                    <p class="label">Username</p>
+                    <p id="profilename"></p>
+                    <p class="label">Email</p>
+                    <p id="profileemail"></p>
+                </div>
+            </div>
+            <div class = "funFacts">
+                <p class = "label">Tasks Completed : </p>
+                <p class = "label">Average Exam Score : </p>
+            </div>
+        </div>
+    </body>
+        
+</html>

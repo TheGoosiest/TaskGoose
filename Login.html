@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Log into TaskGoose</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='log in.css') }}">
+        <script type="text/javascript">
+            const DEV_PAGE_URL = "{{ url_for('dev_page') }}";
+        </script>
+        <script type="text/javascript" src="{{ url_for('static', filename='checkForDev.js') }}" defer></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='validatelogin.js') }}" defer></script>
+        <script type="text/javascript">
+            const HOME_PAGE_URL = "{{ url_for('homepage') }}";
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <a href="{{ url_for('index') }}" >
+                <h1 class="logoText">TaskGoose</h1>
+            </a>
+            <h1>Log In</h1>
+            <p id="errorMsg"></p>
+            <form id="form" onsubmit="return devModeCheck()" name="niceForm">
+                <div>
+                    <label for="usernameInput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                    </label>
+                    <input type="text" name="username" id="usernameInput" placeholder="Username">
+                </div>
+                <div>
+                    <label for="passwordInput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9zm8-3V4a3 3 0 0 0-6 0v2h6z"/>
+                        </svg>
+                    </label>
+                    <input type="password" name="password" id="passwordInput" placeholder="Password">
+                </div>
+                <button type="submit" id="login">Log In</button>
+            </form>
+            <p class="login-link">New here? <a href="{{ url_for('signup_page') }}">Create an account</a></p>
+        </div>
+    </body>
+</html>

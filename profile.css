@@ -1,0 +1,62 @@
+.profilediv {
+    margin: 20px auto;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    margin: 20px auto;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.infocontainer {
+    margin: 20px 20px;
+}
+
+#profilename {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+#profileemail {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.profilio {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pfpheader {
+    margin: 20px;
+}
+
+.userLogo {
+    height: 210px;
+    width: 210px;
+}
+
+.funFacts {
+    margin: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.label {
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}

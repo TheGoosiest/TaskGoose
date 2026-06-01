@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TaskGoose - User Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+        <script>
+            async function updateUserStatus() {
+                try {
+                    const res = await fetch("/me");
+                    const data = await res.json();
+
+                    const homepage = document.getElementById("username");
+                    if (data.logged_in) {
+                        homepage.textContent = `${data.username}`;
+                    } else {
+                        homepage.textContent = "HoW dId YoU eVeN gEt HeRe?";
+                    }
+                } catch (err) {
+                    console.error("Failed to fetch user status:", err);
+                }
+            }
+
+            // Run once on page load
+            updateUserStatus();
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navBar">
+                <a href="{{ url_for('homepage') }}" class="logo">TaskGoose</a>
+                <div class="taskbar">
+                    <a class="tasks">Exam progress chart</a>
+                </div>
+            </div>
+            <div class="leftsidebar">
+                <label>
+                    <img src="{{url_for( 'static', filename='Goosepfp.png')}}" alt="" class="userlogo">
+                </label>
+                <p id="username" class="username"></p>
+                <a href="#" onclick="loadPage('/profile')" class="profile">Profile</a>
+                <a href="#" onclick="loadPage('/tasks')" class="stats">Tasks</a>
+                <a href="{{ url_for('logout') }}" class="logoutlink">Logout</a>
+            </div>
+            <div id="maincontent">
+
+            </div>
+        </div>
+        <script defer src="{{url_for('static', filename='homepage.js')}}"></script>
+    </body>
+</html>

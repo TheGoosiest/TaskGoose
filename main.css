@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.stretcher{
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.uselessbutton{
+    padding: 0px 50px;
+}
+
+.navBar{
+    font-family: sans-serif;
+    background-color: rgb(111, 157, 122);
+    overflow: hidden;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font: 16px 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 14px 20px;
+    float: left;
+    text-transform: uppercase;
+}
+
+.navButtons{
+    float: right;
+    padding: 14px 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 80vh;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+    background-color: rgb(111, 157, 122);
+}
+
+.leftContent{
+    padding: 20px;
+    text-align: left;
+    margin: auto;
+}
+
+.container img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+}
+
+.welcome{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.description{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: 3px solid #759a75;
+    padding: 15px 60px;
+    background: linear-gradient(to bottom right,#8abf8a, #d0f0c0);
+    color: black;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    background-size: 200% 200%; /* for animation */
+    background-position: left;
+    transition: background-position 0.4s ease;
+}
+
+.button:hover{
+    background-position: right bottom;
+    cursor: pointer;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.4);
+}
+
+.footer{
+    background-color: rgb(111, 157, 122);
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 20px;
+    gap: 50px;
+}
+
+.uselessbutton{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 0px 20px;
+    color: black;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(111, 157, 122);
+}

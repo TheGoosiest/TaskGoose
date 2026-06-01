@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign Up for TaskGoose</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='sign up.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='validatesignup.js') }}" defer></script>
+        <script type="text/javascript">
+            const HOME_PAGE_URL = "{{ url_for('homepage') }}";
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <a href="{{ url_for('index') }}" >
+                <h1 class="logoText">TaskGoose</h1>
+            </a>
+            <h1 class="heading">Sign Up</h1>
+            <p id="errorMsg"></p>
+            <form id="form">
+                <div>
+                    <label for="usernameInput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                    </label>
+                    <input type="text" name="username" id="usernameInput" placeholder="Username">
+                </div>
+                <div>
+                    <label for="emailInput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.803L0 4.697zm6.761 3.396L16 11.801V4.697l-9.239 6.396zm-.761.577L.175 12H16l-6.824-4.73L8 9.586l-2.239-1.916z"/>
+                        </svg>
+                    </label>
+                    <input type="email" name="email" id="emailInput" placeholder="Email">
+                </div>
+                <div>
+                    <label for="passwordInput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9zm8-3V4a3 3 0 0 0-6 0v2h6z"/>
+                        </svg>
+                    </label>
+                    <input type="password" name="password" id="passwordInput" placeholder="Password">
+                </div>
+                <button type="submit" id="signup">Sign Up</button>
+            </form>
+            <p id="output"></p>
+            <p class="login-link">Already have an account? <a href="{{ url_for('login_page') }}">Log In</a></p>
+        </div>
+    </body>
+</html>

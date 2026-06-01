@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Users</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='dev.css') }}">
+</head>
+<body>
+<div class="logocontainer">
+  <a href="{{ url_for('index') }}">
+    <h1 class="thelogo">TASKGOOSE</h1>
+  </a>
+</div>
+
+<h1 class="title">Users</h1>
+<div class="tableContainer">
+  <table id="output" class="output">
+  </table>
+</div>
+<script>
+const output = document.getElementById("output");
+
+async function refreshUsers() {
+  const response = await fetch("http://localhost:5000/users");
+  const data = await response.json();
+
+  output.innerHTML = `
+    <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Password</th>
+    </tr>
+  `;
+  data.forEach(user => {
+    const tr = document.createElement("tr");
+    tr.classList.add("user-row");
+    tr.innerHTML = `
+      <td>${user.id}</td>
+      <td>${user.username}</td>
+      <td>${user.email}</td>
+      <td>${user.password}</td>
+    `;
+    output.appendChild(tr);
+  });
+}
+refreshUsers();
+</script>
+<div class="container">
+  <button onclick="refreshUsers()" class="refresh">Refresh</button>
+  <input type="number" id="deleteUserId" placeholder="User ID to delete" class="inptdel">
+  <button onclick="deleteUser(document.getElementById('deleteUserId').value)" class="refresh">Delete User</button>
+  <p id="errorMessage" class="err"></p>
+</div>
+<script src="{{ url_for('static', filename='devTools.js') }}"></script>
+</body>
+</html>

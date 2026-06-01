@@ -1,0 +1,127 @@
+.title {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.user-row {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.refresh {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.refresh:hover {
+    background-color: green;
+}
+
+.output{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+}
+
+th, td{
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #999999;
+}
+
+th{
+    background-color: darkgreen;
+    color: white;
+    font-size: 1.2rem;
+}
+
+tr:hover{
+    background-color: #f1f1f1;
+}
+
+.tableContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inptdel{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.inptdel:hover{
+    border: 3px solid darkgreen;
+    transition: 100ms ease;
+}
+
+.inptdel:focus{
+    outline: none;
+    border: 3px solid green;
+}
+
+.logocontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.thelogo{
+    font: arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
+.thelogo:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.err{
+    color: red;
+    font-weight: 700;
+    margin-top: 30px;
+}
